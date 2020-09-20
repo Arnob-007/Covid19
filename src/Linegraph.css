@@ -1,4 +1,5 @@
 .linegraph {
     display: flex;
     flex: 1;
+    min-height: 200px;
 }

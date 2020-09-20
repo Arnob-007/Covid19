@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { FormControl, MenuItem, Select } from '@material-ui/core';
 import Infobox from './Infobox';
 import './App.css';
 import LiveCases from './LiveCases';
 import LineGraph from './LineGraph';
-import Mapped from './Mapped';
 import "leaflet/dist/leaflet.css"
 
 const App = () => {
@@ -17,6 +16,8 @@ const App = () => {
   const [mapZoom, setMapZoom] = useState(3)
   const [mapCountries, setMapCountries] = useState([])
   const [casesType, setCasesType] = useState ("cases")
+
+  const Mapped = React.lazy(() => import ('./Mapped'))
 
   useEffect(() => {
     
@@ -86,7 +87,7 @@ const App = () => {
           <Infobox 
             setCasesType = {() => setCasesType("cases")} 
             active = {casesType === "cases"}
-            title = "CoronaVirus Cases" 
+            title = "Corona Cases" 
             cases = {countryInfo?.todayCases} 
             total = {countryInfo?.cases} 
           />
@@ -105,8 +106,9 @@ const App = () => {
             total = {countryInfo?.deaths} 
           />
         </div>
-
-        <Mapped casesType = {casesType} countries = {mapCountries} center = {mapCenter} zoom = {mapZoom}/>
+        <Suspense fallback = {<div> Loading </div>}>
+          <Mapped casesType = {casesType} countries = {mapCountries} center = {mapCenter} zoom = {mapZoom}/>
+        </Suspense>
 
       </div>
 

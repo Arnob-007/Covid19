@@ -5,13 +5,17 @@
 }
 
 .infobox:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 3%;
+}
+
+.infobox .MuiCardContent-root {
+    padding: 4%
 }
 
 .info__h2 {
-    padding-bottom: 10px;
+    padding-bottom: 3%;
     font-weight: bold;
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     color: red;
 }
 

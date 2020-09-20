@@ -1,5 +1,6 @@
 body {
     background: rgba(170, 211, 223, 0.5);
+    margin-bottom: 10%;
 }
 
 .App {
@@ -8,17 +9,18 @@ body {
 }
 
 .app__left {
-    flex: 0.73;
-    margin-top: 8px;
+    flex: 0.83;
+    margin-top: 3px;
 }
 
 .app__right {
     display: flex;
     flex-direction: column;
-    flex: 0.22;
+    flex: 0.12;
     background: white;
-    padding: 1%;
-    margin-top: 20px;
+    padding: 1.5%;
+    margin-top: 15px;
+    border-radius: 15px;
 }
 
 .app__header {
@@ -26,13 +28,13 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    margin-top: 15px;
+    margin-top: 8px;
 }
 
 .app__title {
     display: flex;
     color: red;
-    letter-spacing: 0.3em;
+    font-size: 1.5rem;
     text-shadow: 2px 2px rgba(255, 0, 0, 0.3);
 }
 
@@ -52,6 +54,9 @@ body {
 }
 
 @media (max-width: 800px) {
+    body {
+        margin-left: 2%;
+    }
     .App {
         flex-direction: column;
     }
@@ -64,8 +69,22 @@ body {
     border-radius: 50%;
     animation: blink 1000ms infinite;
     align-self: center;
-    margin-left: 30px;
+    margin-left: 1rem;
 }
+
+@media (max-width: 400px) {
+    .app__stats {
+        flex-direction: column;
+    }
+    .app__title {
+        font-size: large;
+        flex: 1;
+    }
+    .blink__icon {
+        display: none;
+    }
+}
+
 
 @keyframes blink {
     0% {

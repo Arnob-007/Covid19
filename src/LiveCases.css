@@ -1,6 +1,6 @@
 .livecases {
     padding-top: 5%;
-    height: 400px;
+    height: 300px;
     overflow: scroll;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .livecases td {
-    padding: 0.3em;
+    padding: 0.2em;
 }
 
 .livecases tr:nth-of-type(odd) {
