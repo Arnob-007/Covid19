@@ -1,0 +1,28 @@
+.infobox {
+    flex: 1;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.infobox:not(:last-child) {
+    margin-right: 20px;
+}
+
+.info__h2 {
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: red;
+}
+
+.infobox:nth-child(even) .info__h2 {
+    color: green;
+}
+
+.info__actv {
+    border-bottom: 10px solid red;
+}
+
+.info__actv:nth-child(even) {
+    border-bottom: 10px solid green;
+}

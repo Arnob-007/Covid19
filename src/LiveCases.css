@@ -1,0 +1,22 @@
+.livecases {
+    padding-top: 5%;
+    height: 400px;
+    overflow: scroll;
+}
+
+.livecases tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+.livecases td {
+    padding: 0.3em;
+}
+
+.livecases tr:nth-of-type(odd) {
+    background-color: lightgray;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

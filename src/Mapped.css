@@ -1,0 +1,30 @@
+.mapped {
+    height: 500px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+}
+
+.mapped .leaflet-container {
+    height: 100%;
+}
+
+.info__flag {
+    height: 60px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.info__name {
+    font-size: 20px;
+    font-weight: bold;
+    color: lightgray;
+}
+
+.info__data {
+    font-size: 15px;
+    margin-top: 5px;
+}
